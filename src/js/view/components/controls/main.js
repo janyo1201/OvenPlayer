@@ -42,8 +42,11 @@ const Controls = function($container, api){
     const $root = LA$("#"+api.getContainerId());
     let lastContentMeta = {};
 
-    let hidePlaylistIcon = api.getConfig().hidePlaylistIcon;
-    hasPlaylist = api.getPlaylist().length > 1 ? (!hidePlaylistIcon ? true : false) : false;
+    hasPlaylist = api.getPlaylist().length > 1;
+
+    if (api.getConfig().hidePlaylistIcon) {
+        hasPlaylist = false;
+    }
 
     let playlistPanel = "";
 
