@@ -32,7 +32,7 @@ const OvenTemplate = function (container, templateName, playerConfig, data, even
         $template = LA$(newElement.firstChild);
 
         return newElement.firstChild;
-    }
+    };
     if(playerConfig && playerConfig.systemText){
         uiText = playerConfig.systemText.ui;
     }
