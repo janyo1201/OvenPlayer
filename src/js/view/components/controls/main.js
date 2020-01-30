@@ -259,7 +259,7 @@ const Controls = function($container, api){
         }
     };
 
-    return OvenTemplate($container, "Controls",  hasPlaylist , api.getConfig(), events, onRendered, onDestroyed);
+    return OvenTemplate($container, "Controls", api.getConfig(), hasPlaylist,  events, onRendered, onDestroyed);
 };
 
 export default Controls;
